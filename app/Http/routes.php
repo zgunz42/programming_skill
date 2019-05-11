@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@show');
+
+Route::post('/users', 'UsersController@store');
+
+Route::post('/skills', 'SkillsController@store');
